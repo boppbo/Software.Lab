@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BitManipulation", "BitManipulation\BitManipulation.vcxproj", "{783ED08D-6CC7-4486-ACAF-6BC0EB81ECF0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{A2C58988-4657-43BD-B06D-6E8CC5308281}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BitManipulation.Tests", "BitManipulation.Tests\BitManipulation.Tests.vcxproj", "{43A6C26C-9551-4A8F-A79E-4929BCB3D4BD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,8 +25,19 @@ Global
 		{783ED08D-6CC7-4486-ACAF-6BC0EB81ECF0}.Release|x64.Build.0 = Release|x64
 		{783ED08D-6CC7-4486-ACAF-6BC0EB81ECF0}.Release|x86.ActiveCfg = Release|Win32
 		{783ED08D-6CC7-4486-ACAF-6BC0EB81ECF0}.Release|x86.Build.0 = Release|Win32
+		{43A6C26C-9551-4A8F-A79E-4929BCB3D4BD}.Debug|x64.ActiveCfg = Debug|x64
+		{43A6C26C-9551-4A8F-A79E-4929BCB3D4BD}.Debug|x64.Build.0 = Debug|x64
+		{43A6C26C-9551-4A8F-A79E-4929BCB3D4BD}.Debug|x86.ActiveCfg = Debug|Win32
+		{43A6C26C-9551-4A8F-A79E-4929BCB3D4BD}.Debug|x86.Build.0 = Debug|Win32
+		{43A6C26C-9551-4A8F-A79E-4929BCB3D4BD}.Release|x64.ActiveCfg = Release|x64
+		{43A6C26C-9551-4A8F-A79E-4929BCB3D4BD}.Release|x64.Build.0 = Release|x64
+		{43A6C26C-9551-4A8F-A79E-4929BCB3D4BD}.Release|x86.ActiveCfg = Release|Win32
+		{43A6C26C-9551-4A8F-A79E-4929BCB3D4BD}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{43A6C26C-9551-4A8F-A79E-4929BCB3D4BD} = {A2C58988-4657-43BD-B06D-6E8CC5308281}
 	EndGlobalSection
 EndGlobal
