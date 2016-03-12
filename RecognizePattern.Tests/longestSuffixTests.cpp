@@ -9,6 +9,21 @@ namespace RecognizePatternTests
 	{
 	public:
 
+		TEST_METHOD(extractSuffixNoPattern)
+		{
+			Assert::AreEqual("Hallo", extract("Hallo"));
+		}
+
+		TEST_METHOD(extractSuffixOnlyPattern)
+		{
+			Assert::AreEqual("", extract("::"));
+		}
+
+		TEST_METHOD(extractSuffixNoSuffix)
+		{
+			Assert::AreEqual("", extract("Ha::llo::"));
+		}
+
 		TEST_METHOD(extractSuffixFirstTest)
 		{
 			Assert::AreEqual("o", extract("Ha::ll::o"));
@@ -26,11 +41,16 @@ namespace RecognizePatternTests
 			Assert::AreEqual("o", result);
 		}
 
-		TEST_METHOD(extract2SuffixSecondTest)
+		TEST_METHOD(extract2SuffixShouldNotThrowOnInputNullPointer)
 		{
 			char* result;
-			extract2("47::11", &result);
-			Assert::AreEqual("11", result);
+			extract2(nullptr, &result);
+			Assert::AreEqual("", result);
+		}
+
+		TEST_METHOD(extract2SuffixShouldNotThrowOnOutputNullPointer)
+		{
+			extract2("47::11", nullptr);
 		}
 	};
 }
