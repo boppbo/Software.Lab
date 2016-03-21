@@ -141,6 +141,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="breakIntoWords.h" />
     <ClInclude Include="wordCount.h" />
     <ClInclude Include="longestSuffix.h" />
     <ClInclude Include="RecognizePattern.h" />
@@ -148,6 +149,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="breakIntoWords.cpp" />
     <ClCompile Include="wordCount.cpp" />
     <ClCompile Include="dllmain.cpp">
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>

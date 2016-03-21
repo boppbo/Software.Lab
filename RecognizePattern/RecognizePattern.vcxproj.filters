@@ -33,6 +33,9 @@
     <ClInclude Include="wordCount.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="breakIntoWords.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -48,6 +51,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="wordCount.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="breakIntoWords.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
