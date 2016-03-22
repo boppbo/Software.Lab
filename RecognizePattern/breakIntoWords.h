@@ -12,4 +12,13 @@
 #define RECOGNIZEPATTERN_API __declspec(dllimport)
 #endif
 
+/// <summary>	Break string into words. </summary>
+///
+/// <remarks>	Boris, 22.03.2016. </remarks>
+///
+/// <param name="line">	   	The line. </param>
+/// <param name="maxwords">	The maxwords. </param>
+/// <param name="words">   	The words. </param>
+///
+/// <returns>	The result count. </returns>
 RECOGNIZEPATTERN_API int breakIntoWords(char *line, int maxwords, char *words[]);

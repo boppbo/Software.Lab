@@ -12,5 +12,19 @@
 #define RECOGNIZEPATTERN_API __declspec(dllimport)
 #endif
 
+/// <summary>	Extracts the given input. </summary>
+///
+/// <remarks>	Boris, 23.03.2016. </remarks>
+///
+/// <param name="input">	The input. </param>
+///
+/// <returns>	null if it fails, else a pointer to a char. </returns>
 RECOGNIZEPATTERN_API char* extract(char* input);
+
+/// <summary>	Extracts the 2. </summary>
+///
+/// <remarks>	Boris, 23.03.2016. </remarks>
+///
+/// <param name="input"> 	The input. </param>
+/// <param name="output">	The output. </param>
 RECOGNIZEPATTERN_API void extract2(char* input, char** output);

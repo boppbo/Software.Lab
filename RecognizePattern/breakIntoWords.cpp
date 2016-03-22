@@ -1,6 +1,16 @@
 #include "stdafx.h"
 #include "breakIntoWords.h"
 
+/// <summary>	Saves a word into the array. </summary>
+///
+/// <remarks>	Boris, 23.03.2016. </remarks>
+///
+/// <param name="line">				The line. </param>
+/// <param name="currWord">			The curr word. </param>
+/// <param name="maxWords">			The maximum words. </param>
+/// <param name="currWordStart">	The curr word start. </param>
+/// <param name="currWordEnd">  	The curr word end. </param>
+/// <param name="words">			The words. </param>
 static void saveWord(char* line, int* currWord, int maxWords, int currWordStart, int currWordEnd, char* words[])
 {
 	if (*currWord >= maxWords || currWordStart >= currWordEnd)
@@ -11,6 +21,15 @@ static void saveWord(char* line, int* currWord, int maxWords, int currWordStart,
 	(*currWord)++;
 }
 
+/// <summary>	Break string into words. </summary>
+///
+/// <remarks>	Boris, 23.03.2016. </remarks>
+///
+/// <param name="line">	   	The line. </param>
+/// <param name="maxwords">	The maxwords. </param>
+/// <param name="words">   	The words. </param>
+///
+/// <returns>	An int. </returns>
 RECOGNIZEPATTERN_API int breakIntoWords(char *line, int maxwords, char *words[])
 {
 	int result = 0;

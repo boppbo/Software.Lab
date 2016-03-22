@@ -1,6 +1,14 @@
 #include "stdafx.h"
 #include "longestSuffix.h"
 
+/// <summary>	Extracts the longest suffix for the given pattern. </summary>
+///
+/// <remarks>	Boris, 23.03.2016. </remarks>
+///
+/// <param name="input">  	The input. </param>
+/// <param name="pattern">	Specifies the pattern. </param>
+///
+/// <returns>	null if it fails, else a pointer to a char. </returns>
 static char* extract(char* input, char* pattern)
 {
 	if (input == nullptr)
@@ -32,11 +40,24 @@ static char* extract(char* input, char* pattern)
 	return input;
 }
 
+/// <summary>	Extracts the longest suffix </summary>
+///
+/// <remarks>	Boris, 22.03.2016. </remarks>
+///
+/// <param name="input">	The input. </param>
+///
+/// <returns>	null if it fails, else a pointer to a char. </returns>
 RECOGNIZEPATTERN_API char * extract(char * input)
 {
 	return extract(input, "::");
 }
 
+/// <summary>	Extracts the longest suffix. </summary>
+///
+/// <remarks>	Boris, 22.03.2016. </remarks>
+///
+/// <param name="input"> 	The input. </param>
+/// <param name="output">	The output. </param>
 RECOGNIZEPATTERN_API void extract2(char* input, char ** output)
 {
 	if (output == nullptr)
