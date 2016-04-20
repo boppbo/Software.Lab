@@ -16,13 +16,14 @@ RECOGNIZEPATTERN_API int count(char * input)
 	if (input != NULL)
 	{
 		bool currentlyInWord = false;
+		// go trough the string
 		for (unsigned int i = 0; i < strlen(input); i++)
 		{
 			char currentChar = input[i];
 
+			// increases the count when there aren't multiple spaces in series
 			if (currentChar != ' ' && !currentlyInWord)
 				result++;
-
 			currentlyInWord = (currentChar != ' ');
 		}
 	}

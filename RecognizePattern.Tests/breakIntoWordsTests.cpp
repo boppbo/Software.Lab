@@ -67,6 +67,16 @@ namespace RecognizePatternTests
 			Assert::AreEqual("lo", words[1]);
 		}
 
+		TEST_METHOD(breakIntoWordsForTwoWordsMuchSpace)
+		{
+			char* words[2];
+			char str[] = "Hal                        lo";
+
+			Assert::AreEqual(2, breakIntoWords(str, 2, words));
+			Assert::AreEqual("Hal", words[0]);
+			Assert::AreEqual("lo", words[1]);
+		}
+
 		TEST_METHOD(breakIntoWordsForWhitespaceAndTwoWords)
 		{
 			char* words[2];

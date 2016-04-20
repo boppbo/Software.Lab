@@ -38,12 +38,18 @@ RECOGNIZEPATTERN_API int breakIntoWords(char *line, int maxwords, char *words[])
 	{
 		int lastWordStart = 0;
 		unsigned int lineLen = strlen(line);
+
+		// go through the line
 		for (unsigned int i = 0; i <= lineLen; i++)
 		{
 			char currentChar = line[i];
 
+			// a space divides words,
+			// furthermore we might have a word at the end of the string
 			if (currentChar == ' ' || i == lineLen)
 			{
+				// will throw away whitespace as the lastwordstart will then be
+				// bigger or equal than current word start 
 				saveWord(line, &result, maxwords, lastWordStart, i, words);
 				lastWordStart = i + 1;
 			}
