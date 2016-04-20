@@ -1,5 +1,8 @@
 #include "stdafx.h"
+ 
+extern "C" {
 #include "../BitManipulation/switchLowHighByte.h"
+}
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 

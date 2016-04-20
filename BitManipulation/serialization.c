@@ -22,6 +22,6 @@ BITMANIPULATION_API void serialize(Status s, Numbers n, short int * data)
 /// <param name="n">   	The Numbers to process. </param>
 BITMANIPULATION_API void deserialize(short int data, Status * s, Numbers * n)
 {
-	*s = static_cast<Status>(data & 0x00FF);
-	*n = static_cast<Numbers>(data >> 8);
+	*s = (Status)(data & 0x00FF);
+	*n = (Numbers)(data >> 8);
 }

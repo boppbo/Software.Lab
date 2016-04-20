@@ -6,10 +6,14 @@
 // that uses this DLL. This way any other project whose source files include this file see 
 // RECOGNIZEPATTERN_API functions as being imported from a DLL, whereas this DLL sees symbols
 // defined with this macro as being exported.
+#ifdef _WIN32
 #ifdef RECOGNIZEPATTERN_EXPORTS
 #define RECOGNIZEPATTERN_API __declspec(dllexport)
 #else
 #define RECOGNIZEPATTERN_API __declspec(dllimport)
+#endif
+#else
+#define RECOGNIZEPATTERN_API
 #endif
 
 /// <summary>	Extracts the given input. </summary>

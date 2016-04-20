@@ -34,7 +34,7 @@ RECOGNIZEPATTERN_API int breakIntoWords(char *line, int maxwords, char *words[])
 {
 	int result = 0;
 
-	if (line != nullptr)
+	if (line != NULL)
 	{
 		int lastWordStart = 0;
 		unsigned int lineLen = strlen(line);

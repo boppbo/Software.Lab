@@ -35,19 +35,19 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="stdafx.cpp">
+    <ClCompile Include="breakIntoWords.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="dllmain.cpp">
+    <ClCompile Include="dllmain.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="longestSuffix.cpp">
+    <ClCompile Include="longestSuffix.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="wordCount.cpp">
+    <ClCompile Include="stdafx.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="breakIntoWords.cpp">
+    <ClCompile Include="wordCount.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,4 +1,5 @@
 #include "stdafx.h"
+#include "stdbool.h"
 #include "wordCount.h"
 
 /// <summary>	Counts the words in the given input. </summary>
@@ -12,7 +13,7 @@ RECOGNIZEPATTERN_API int count(char * input)
 {
 	int result = 0;
 
-	if (input != nullptr)
+	if (input != NULL)
 	{
 		bool currentlyInWord = false;
 		for (unsigned int i = 0; i < strlen(input); i++)

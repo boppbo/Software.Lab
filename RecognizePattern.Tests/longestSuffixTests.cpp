@@ -1,5 +1,8 @@
 #include "stdafx.h"
+
+extern "C" {
 #include "../RecognizePattern/longestSuffix.h"
+}
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 

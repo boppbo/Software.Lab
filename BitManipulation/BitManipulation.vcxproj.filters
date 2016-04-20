@@ -32,16 +32,16 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="stdafx.cpp">
+    <ClCompile Include="dllmain.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="dllmain.cpp">
+    <ClCompile Include="serialization.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="serialization.cpp">
+    <ClCompile Include="stdafx.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="switchLowHighByte.cpp">
+    <ClCompile Include="switchLowHighByte.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
