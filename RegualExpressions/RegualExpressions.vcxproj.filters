@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\FiniteStateAutomation">
+      <UniqueIdentifier>{097dd756-1d1a-494c-9792-a7a08f23e2fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\FiniteStateAutomation">
+      <UniqueIdentifier>{cb2b1bfe-d60e-46d5-a25f-c35b67c5b694}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\RegularExpressions">
+      <UniqueIdentifier>{795582c1-dec4-496f-8cc4-81424f2486f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\RegularExpressions">
+      <UniqueIdentifier>{dc0f1ca9-7fdf-47c9-826b-ff37bdf2d8e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\RegularExpressions\Core">
+      <UniqueIdentifier>{9e0cc9a4-823f-46d1-9f4d-9c3fb7abacfa}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Transform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Transition.h">
+      <Filter>Header Files\FiniteStateAutomation</Filter>
+    </ClInclude>
+    <ClInclude Include="DeterministicFiniteStateAutomation.h">
+      <Filter>Header Files\FiniteStateAutomation</Filter>
+    </ClInclude>
+    <ClInclude Include="RegularExpression.h">
+      <Filter>Header Files\RegularExpressions\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="RegularExpressionType.h">
+      <Filter>Header Files\RegularExpressions\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Phi.h">
+      <Filter>Header Files\RegularExpressions</Filter>
+    </ClInclude>
+    <ClInclude Include="Epsilon.h">
+      <Filter>Header Files\RegularExpressions</Filter>
+    </ClInclude>
+    <ClInclude Include="Character.h">
+      <Filter>Header Files\RegularExpressions</Filter>
+    </ClInclude>
+    <ClInclude Include="Alternative.h">
+      <Filter>Header Files\RegularExpressions</Filter>
+    </ClInclude>
+    <ClInclude Include="Concatenation.h">
+      <Filter>Header Files\RegularExpressions</Filter>
+    </ClInclude>
+    <ClInclude Include="Star.h">
+      <Filter>Header Files\RegularExpressions</Filter>
+    </ClInclude>
+    <ClInclude Include="NonDeterministicFiniteStateAutomation.h">
+      <Filter>Header Files\FiniteStateAutomation</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DeterministicFiniteStateAutomation.cpp">
+      <Filter>Source Files\FiniteStateAutomation</Filter>
+    </ClCompile>
+    <ClCompile Include="Transform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
