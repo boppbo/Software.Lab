@@ -15,7 +15,6 @@
 /// <summary>	The string class. </summary>
 ///
 /// <remarks>	Boris, 4/4/2016. </remarks>
-
 class CUSTOMSTRINGS_API String {
 private:
 	char* charArr = "";
@@ -24,16 +23,54 @@ private:
 	void init(const char* charArr);
 	static int len(const char* charArr);
 public:
+	/// <summary>	Default constructor. </summary>
 	String() { };
+
+	/// <summary>	Constructor. </summary>
+	///
+	/// <param name="character">	The character. </param>
 	explicit String(char character);
+
+	/// <summary>	Constructor. </summary>
+	///
+	/// <param name="charArr">	Array of characters. </param>
 	explicit String(const char* charArr);
+
+	/// <summary>	Copy constructor. </summary>
+	///
+	/// <param name="other">	The other. </param>
 	String(const String& other) : String(other.charArr) { }
+	
+	/// <summary>	Destructor. </summary>
 	~String();
 
+	/// <summary>	Array indexer operator. </summary>
+	///
+	/// <param name="index">	Zero-based index of the. </param>
+	///
+	/// <returns>	The indexed value. </returns>
 	char& operator[](int index) const;
+
+	/// <summary>	Assignment operator. </summary>
+	///
+	/// <param name="other">	The other. </param>
+	///
+	/// <returns>	A shallow copy of this object. </returns>
 	String& operator=(const String& other);
+
+	/// <summary>	Addition assignment operator. </summary>
+	///
+	/// <param name="other">	The other. </param>
+	///
+	/// <returns>	The result of the operation. </returns>
 	String& operator+=(const String& other);
 
+	/// <summary>	Stream insertion operator. </summary>
+	///
+	/// <param name="out">	[in,out] The out. </param>
+	/// <param name="s">  	[in,out] The String to process. </param>
+	///
+	/// <returns>	The shifted result. </returns>
 	CUSTOMSTRINGS_API friend std::ostream& operator<< (std::ostream &out, String &s);
 };
 
