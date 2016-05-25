@@ -24,16 +24,30 @@ void testString()
 
 void testRegex()
 {
+    // a + (a+b)
+    RE* r1 = new Alt(
+        new Ch('a'),
+        new Alt(new Ch('a'), new Ch('b')));
+    cout << r1->pretty() << endl;
+    cout << r1->simp()->pretty() << endl;
+
+    // (a+b) + a
+    RE* r2 = new Alt(
+        new Alt(new Ch('a'), new Ch('b')),
+        new Ch('a'));
+    cout << r2->pretty() << endl;
+    cout << r2->simp()->pretty() << endl;
 
     // phi + c
     RE* r3 = new Alt(new Phi(), new Ch('c'));
+    cout << r3->pretty() << endl;
+    cout << r3->simp()->pretty() << endl;
 
     // c + phi
     RE* r4 = new Alt(new Ch('c'), new Phi());
+    cout << r4->pretty() << endl;
+    cout << r4->simp()->pretty() << endl;
 
-    cout << r3->pretty() << endl;
-
-    cout << r3->simp()->pretty() << endl;
 
     // c**
     RE* r5 = new Star(new Star(new Ch('c')));
@@ -68,11 +82,11 @@ int main()
 {
     cout << "String tests:" << endl;
     testString();
-	cout << endl;
+    cout << endl;
 
     cout << "Regex tests:" << endl;
     testRegex();
-	cout << endl;
+    cout << endl;
 
     cout << "FSA tests:" << endl;
     testFSA();

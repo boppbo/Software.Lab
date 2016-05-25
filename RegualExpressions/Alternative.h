@@ -72,6 +72,21 @@ public:
 				return star;
 		}
 
+		// r1+r2 + r1 ==> r1+r2
+		if (r1->ofType() == AltType)
+		{
+			Alt* alt = static_cast<Alt*>(r1);
+			if (alt->getLeft()->equals(r2) || alt->getRight()-equals(r2))
+				return alt;
+		}
+		// r1 + r1+r2 ==> r1+r2
+		if (r2->ofType() == AltType)
+		{
+			Alt* alt = static_cast<Alt*>(r2);
+			if (alt->getLeft()->equals(r1) || alt->getRight() - equals(r1))
+				return alt;
+		}
+
 		return this;
 
 		// N.B. We're a bit relaxed when it comes to garbage collection.

@@ -14,6 +14,29 @@ namespace RegularExpressionsTests
 	{
 	public:
 		
+		TEST_METHOD(simplifyAlternativeBug1)
+		{
+			// a + (a+b)
+			RE* re = new Alt(
+				new Ch('a'),
+				new Alt(new Ch('a'), new Ch('b')));
+			RE* simp = re->simp();
+			Assert::IsTrue(simp->equals(new Alt(new Ch('a'), new Ch('b'))));
+			Assert::AreEqual(simp->pretty(), string("(a+b)"));
+
+		}
+
+		TEST_METHOD(simplifyAlternativeBug2)
+		{
+			// (a+b) + a
+			RE* re = new Alt(
+				new Alt(new Ch('a'), new Ch('b')),
+				new Ch('a'));
+			RE* simp = re->simp();
+			Assert::IsTrue(simp->equals(new Alt(new Ch('a'), new Ch('b'))));
+			Assert::AreEqual(simp->pretty(), string("(a+b)"));
+		}
+
 		TEST_METHOD(simplifySixthRegexRule)
 		{
 			RE* re = new Alt(new Phi(), new Ch('c'));
