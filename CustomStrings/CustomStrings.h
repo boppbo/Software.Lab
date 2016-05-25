@@ -21,6 +21,7 @@ private:
 	char* charArr = "";
 	int size = 0;
 	void dispose();
+	void init(const char* charArr);
 	static int len(const char* charArr);
 public:
 	String() { };
@@ -30,8 +31,8 @@ public:
 	~String();
 
 	char& operator[](int index) const;
-	String& operator=(const String& other) const;
-	String& operator+=(const String& other) const;
+	String& operator=(const String& other);
+	String& operator+=(const String& other);
 
 	CUSTOMSTRINGS_API friend std::ostream& operator<< (std::ostream &out, String &s);
 };

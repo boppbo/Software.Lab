@@ -17,6 +17,20 @@ void String::dispose()
 	{
 		delete[] this->charArr;
 		this->charArr = "";
+		this->size = 0;
+	}
+}
+
+void String::init(const char* charArr)
+{
+	this->size = this->len(charArr);
+	if (this->size < 1)
+		return;
+
+	this->charArr = new char[this->size + 1];
+	for (int i = 0; i <= this->size; i++)
+	{
+		this->charArr[i] = charArr[i];
 	}
 }
 
@@ -55,15 +69,7 @@ String::String(char value)
 /// <param name="charArr">	Array of characters. </param>
 String::String(const char* charArr)
 {
-	this->size = this->len(charArr);
-	if (this->size < 1)
-		return;
-
-	this->charArr = new char[this->size + 1];
-	for (int i = 0; i <= this->size; i++)
-	{
-		this->charArr[i] = charArr[i];
-	}
+	init(charArr);
 }
 
 /// <summary>	Destructor. </summary>
@@ -74,9 +80,11 @@ String::~String()
 	this->dispose();
 }
 
-String& String::operator=(const String& other) const
+String& String::operator=(const String& other)
 {
-	return *new String(other);
+	this->dispose();
+	this->init(other.charArr);
+	return *this;
 }
 
 /// <summary>	Addition assignment operator. </summary>
@@ -86,21 +94,25 @@ String& String::operator=(const String& other) const
 /// <param name="other">	The other. </param>
 ///
 /// <returns>	The result of the operation. </returns>
-String& String::operator+=(const String& other) const
+String& String::operator+=(const String& other)
 {
 	char* newArr = new char[this->size + other.size + 1];
 
+	// copy self
 	for (int i = 0; i < this->size; i++)
 	{
 		newArr[i] = this->charArr[i];
 	}
-	//includes the \0
+	// copy other - includes the \0
 	for (int i = 0; i <= other.size; i++)
 	{
 		newArr[this->size + i] = other.charArr[i];
 	}
 
-	return *new String(newArr);
+	this->dispose();
+	this->init(newArr);
+
+	return *this;
 }
 
 /// <summary>	Array indexer operator. </summary>
