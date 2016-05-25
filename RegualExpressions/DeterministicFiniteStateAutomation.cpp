@@ -3,12 +3,16 @@
 
 using namespace std;
 
+/// <summary>	Resets this object. </summary>
 void FSA::reset() {
 	this->current->clear();
 	this->current->push_back(this->getInitial());
 	this->closure();
 }
 
+/// <summary>	Query if this object is final. </summary>
+///
+/// <returns>	true if final, false if not. </returns>
 bool FSA::isFinal() {
 	for (size_t i = 0; i < this->getFinals().size(); i++) {
 		if (find(this->current->begin(), this->current->end(), this->getFinals()[i]) != this->current->end())
@@ -17,6 +21,7 @@ bool FSA::isFinal() {
 	return false;
 }
 
+/// <summary>	Closures this object. </summary>
 void FSA::closure() {
 	for (int i = 0; i < this->current->size(); i++)
 	{
@@ -28,6 +33,9 @@ void FSA::closure() {
 	}
 }
 
+/// <summary>	Steps the given c. </summary>
+///
+/// <param name="c">	The character. </param>
 void FSA::step(char c) {
 	vector<int> *next = new vector<int>();
 	for (size_t i = 0; i < this->getTransitions().size(); i++) {
@@ -42,6 +50,11 @@ void FSA::step(char c) {
 	this->closure();
 }
 
+/// <summary>	Runs the string. </summary>
+///
+/// <param name="s">	The string. </param>
+///
+/// <returns>	true if it succeeds, false if it fails. </returns>
 bool FSA::run(string s) {
 	this->reset();
 	for (size_t i = 0; i < s.length(); i++) {

@@ -4,6 +4,14 @@
 
 using namespace std;
 
+/// <summary>	Gets a nfa. </summary>
+///
+/// <exception cref="std::logic_error">	Raised when a logic error condition occurs. </exception>
+///
+/// <param name="regularExpression">	[in,out] The regular expression. </param>
+/// <param name="idProvider">			[in,out] The identifier provider. </param>
+///
+/// <returns>	The nfa. </returns>
 NFA FiniteStateAutomationFactory::getNFA(RE& regularExpression, IdProvider &idProvider)
 {
 	vector<Transition> ts;
@@ -77,6 +85,11 @@ NFA FiniteStateAutomationFactory::getNFA(RE& regularExpression, IdProvider &idPr
 
 }
 
+/// <summary>	Gets a nfa. </summary>
+///
+/// <param name="regularExpression">	[in,out] The regular expression. </param>
+///
+/// <returns>	The nfa. </returns>
 NFA FiniteStateAutomationFactory::getNFA(RE& regularExpression)
 {
 	IdProvider foo;

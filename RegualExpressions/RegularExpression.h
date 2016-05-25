@@ -19,10 +19,16 @@ public:
 	/// <remarks>	Boris, 4/6/2016. </remarks>
 	///
 	/// <returns>	a pointer to a RE. </returns>
-	//RE* simpFix() {
-	//	RE* simp = this->simp();
-	//	return this->equals(simp) ? this : simp->simpFix();
-	//}
+	RE* simpFix() {
+		RE* simp = this->simp();
+		return this->equals(simp) ? this : simp->simpFix();
+	}
+
+	/// <summary>	Tests if this RE* is considered equal to another. </summary>
+	///
+	/// <param name="other">	[in,out] If non-null, the re* to compare to this object. </param>
+	///
+	/// <returns>	true if the objects are considered equal, false if they are not. </returns>
 	virtual bool equals(RE* other)
 	{
 		if (other == nullptr)
